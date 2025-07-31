@@ -1,0 +1,47 @@
+import * as React from "react";
+
+const Logo = ({ color = "#000", ...props }) => (
+  <svg
+    width={100}
+    height={120}
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+    overflow="hidden"
+    viewBox="0 0 100 120"
+    {...props}
+  >
+    <g>
+      {/* Optional background path */}
+      <path
+        x={0}
+        y={0}
+        width={480}
+        height={576}
+        fill="transparent"
+        fillOpacity={0}
+        d="M0 0H100V120H0V0z"
+      />
+      {/* Main logo paths */}
+      <path d="m42.731 5.331 7.5 -4.813 48.421 27.956 -7.5 4.813Z" fill={color} />
+      <path d="m2.55 37.583 -0.004 -9.329L50.471 0.585l0.004 9.329Z" fill={color} />
+      <path d="m91.042 24.792 7.917 3.98V75.208l-7.917 -3.98Z" fill={color} />
+      <path d="m98.979 74.898 -7.861 -4.22L59.34 93.339l7.861 4.22Z" fill={color} />
+      <path d="m10.208 52.292 -7.917 4.376V89.167l7.917 -4.376Z" fill={color} />
+      <path d="m2.519 89.094 7.914 -4.574L61.531 114.022l-7.914 4.574Z" fill={color} />
+      <path d="m16.258 82.943 7.914 -4.574 48.006 27.716 -7.914 4.574Z" fill={color} />
+      <path d="m24.167 46.25 -7.917 4.376V82.917l7.917 -4.376Z" fill={color} />
+      <path d="m2.55 52.299 -0.004 -9.329 47.925 -27.67 0.004 9.329Z" fill={color} />
+      <path d="m99.448 88.04 -7.064 -3.793 -22.117 15.772 7.064 3.793Z" fill={color} />
+      <path d="m42.861 20.199 7.5 -4.813 35.043 20.232 -7.5 4.813Z" fill={color} />
+      <path d="m77.708 32.083 7.917 3.98V68.333l-7.917 -3.98Z" fill={color} />
+      <path d="m77.798 64.296 0.278 9.147 7.658 -5.224Z" fill={color} />
+      <path d="M99.375 87.708h-11.875l11.875 -8.75Z" fill={color} />
+      <path
+        d="M44.792 50.177c-1.841 0 -3.333 1.492 -3.333 3.333v13.333c0 1.841 1.492 3.334 3.333 3.334h13.333c1.841 0 3.333 -1.492 3.333 -3.334v-13.333c0 -1.841 -1.492 -3.333 -3.333 -3.333ZM51.458 40c11.046 0 20 8.954 20 20s-8.954 20 -20 20 -20 -8.954 -20 -20 8.954 -20 20 -20"
+        fill={color}
+      />
+    </g>
+  </svg>
+);
+
+export default Logo;

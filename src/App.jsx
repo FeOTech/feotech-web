@@ -57,7 +57,7 @@ function App() {
   if (isLoading) return <Loader />;
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/feotech-web">
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />

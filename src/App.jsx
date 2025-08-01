@@ -9,6 +9,7 @@ import FeatureSection from "./components/FeatureSection";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 import Loader from "./components/Loader";
+import ScrollToHashElement from "./components/ScrollToHashElements";
 
 // Lazy-loaded components (heavier or lower priority)
 const AboutUs = lazy(() => import("./components/AboutUs"));
@@ -57,8 +58,9 @@ function App() {
   if (isLoading) return <Loader />;
 
   return (
-    <BrowserRouter basename="/feotech-web">
+    <BrowserRouter basename="/feotech-web/">
       <ScrollToTop />
+      <ScrollToHashElement />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/project/:id" element={<ProjectDetails />} />

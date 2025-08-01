@@ -1,6 +1,6 @@
 // src/pages/ProjectDetails.jsx
 import React from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import ProjectVideo from "../components/ProjectVideo";
 import { motion } from "framer-motion";
 // import RecommendationSystem from '../projects/RecommendationSystem';
@@ -42,6 +42,7 @@ const projectMap = {
 const ProjectDetails = () => {
   const { id } = useParams();
   const project = projectMap[id];
+  const MotionLink = motion(Link);
 
   if (!project)
     return (
@@ -75,9 +76,9 @@ const ProjectDetails = () => {
           {Object.entries(projectMap)
             .filter(([key]) => key !== id)
             .map(([key, project], i) => (
-              <motion.a
+              <MotionLink
                 key={key}
-                href={`/project/${key}`}
+                to={`/project/${key}`}
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.15, duration: 0.6 }}
@@ -91,7 +92,7 @@ const ProjectDetails = () => {
                 <span className="inline-block mt-4 text-indigo-600 hover:underline font-medium">
                   View Project →
                 </span>
-              </motion.a>
+              </MotionLink>
             ))}
         </div>
       </section>

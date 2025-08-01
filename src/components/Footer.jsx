@@ -11,7 +11,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
         {/* Brand */}
         <div>
-          <Link to="/" className="flex items-center gap-2 group">
+          <Link to="/#home" className="flex items-center gap-2 group">
             <div className="flex items-center gap-3 mb-4">
               <Logo width={40} height={40} color="#FFFFFF" />
               <h3 className="text-3xl font-extrabold text-white tracking-tight">
@@ -31,10 +31,26 @@ const Footer = () => {
             Projects
           </h4>
           <ul className="space-y-2 text-white/60 text-sm">
-            <li><a href="/project/web-dev" className="hover:text-white transition">Web Development</a></li>
-            <li><a href="/project/data-engineering" className="hover:text-white transition">Data Engineering</a></li>
-            <li><a href="/project/recommendation-system" className="hover:text-white transition">Recommendation System</a></li>
-            <li><a href="/project/ai-chatbot" className="hover:text-white transition">AI Chatbot</a></li>
+            <li>
+              <Link to="/project/web-development" className="hover:text-white transition">
+                Web Development
+              </Link>
+            </li>
+            <li>
+              <Link to="/project/data-engineering" className="hover:text-white transition">
+                Data Engineering
+              </Link>
+            </li>
+            <li>
+              <Link to="/project/recommendation-system" className="hover:text-white transition">
+                Recommendation System
+              </Link>
+            </li>
+            <li>
+              <Link to="/project/ai-chatbot" className="hover:text-white transition">
+                AI Chatbot
+              </Link>
+            </li>
           </ul>
         </div>
 
@@ -44,8 +60,16 @@ const Footer = () => {
             Resources
           </h4>
           <ul className="space-y-2 text-white/60 text-sm">
-            <li><a href="/team-details" className="hover:text-white transition">Team Details</a></li>
-            <li><a href="/contact" className="hover:text-white transition">Contact</a></li>
+            <li>
+              <Link to="/team-details" className="hover:text-white transition">
+                Team Details
+              </Link>
+            </li>
+            <li>
+              <Link to="/#contact" className="hover:text-white transition">
+                Contact
+              </Link>
+            </li>
           </ul>
         </div>
 
@@ -55,9 +79,27 @@ const Footer = () => {
             Connect
           </h4>
           <div className="flex gap-5 text-xl">
-            <a href="https://www.linkedin.com/company/feotech/" className="text-white/60 hover:text-white transition"><FaLinkedin /></a>
-            <a href="https://github.com/FeOTech" className="text-white/60 hover:text-white transition"><FaGithub /></a>
-            <a href="https://twitter.com" className="text-white/60 hover:text-white transition"><FaTwitter /></a>
+            <a
+              href="https://www.linkedin.com/company/feotech/"
+              className="text-white/60 hover:text-white transition"
+              target="_blank" rel="noopener noreferrer"
+            >
+              <FaLinkedin />
+            </a>
+            <a
+              href="https://github.com/FeOTech"
+              className="text-white/60 hover:text-white transition"
+              target="_blank" rel="noopener noreferrer"
+            >
+              <FaGithub />
+            </a>
+            <a
+              href="https://twitter.com"
+              className="text-white/60 hover:text-white transition"
+              target="_blank" rel="noopener noreferrer"
+            >
+              <FaTwitter />
+            </a>
           </div>
         </div>
       </div>

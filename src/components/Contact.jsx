@@ -3,6 +3,7 @@ import { IoIosMail } from "react-icons/io";
 import { FaLinkedin } from "react-icons/fa";
 import { FaPhoneVolume } from "react-icons/fa6";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Contact = () => {
   const [showModal, setShowModal] = useState(false);
@@ -57,7 +58,7 @@ const Contact = () => {
           <FaLinkedin className="mx-auto mb-2" size={40} />
           <h4 className="font-bold">LinkedIn</h4>
           <a
-            href="https://www.linkedin.com/company/feotech/about/"
+            href="https://www.linkedin.com/company/feotech/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm text-blue-600 hover:underline"
@@ -68,7 +69,7 @@ const Contact = () => {
         <div>
           <IoIosMail className="mx-auto mb-2" size={40} />
           <h4 className="font-bold">Email</h4>
-          <p className="text-sm">feotech@gmail.com</p>
+          <p className="text-sm">feotech.in@gmail.com</p>
         </div>
       </div>
 

@@ -37,7 +37,7 @@ const cards = [
     title: "Web Development",
     description:
       "We help you take your business online with a meticulously crafted website, tailored to your goals. From planning to launch, we deliver an end-to-end experience that brings your brand to life.",
-    image: sampleImg,
+    image: sampleImg1,
     link: "#",
   },
 ];

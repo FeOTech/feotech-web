@@ -1,8 +1,8 @@
 import React from "react";
-import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaTwitter, FaMailchimp } from "react-icons/fa";
 import Logo from "../assets/svg/Logo";
 import { Link } from "react-router-dom";
-import Lottie from "lottie-react";
+import { SiGmail } from "react-icons/si";
 // import footerAnimation from "../assets/footer-lottie.json"; // adjust path if needed
 
 const Footer = () => {
@@ -32,22 +32,34 @@ const Footer = () => {
           </h4>
           <ul className="space-y-2 text-white/60 text-sm">
             <li>
-              <Link to="/project/web-development" className="hover:text-white transition">
+              <Link
+                to="/project/web-development"
+                className="hover:text-white transition"
+              >
                 Web Development
               </Link>
             </li>
             <li>
-              <Link to="/project/data-engineering" className="hover:text-white transition">
+              <Link
+                to="/project/data-engineering"
+                className="hover:text-white transition"
+              >
                 Data Engineering
               </Link>
             </li>
             <li>
-              <Link to="/project/recommendation-system" className="hover:text-white transition">
+              <Link
+                to="/project/recommendation-system"
+                className="hover:text-white transition"
+              >
                 Recommendation System
               </Link>
             </li>
             <li>
-              <Link to="/project/ai-chatbot" className="hover:text-white transition">
+              <Link
+                to="/project/ai-chatbot"
+                className="hover:text-white transition"
+              >
                 AI Chatbot
               </Link>
             </li>
@@ -82,23 +94,25 @@ const Footer = () => {
             <a
               href="https://www.linkedin.com/company/feotech/"
               className="text-white/60 hover:text-white transition"
-              target="_blank" rel="noopener noreferrer"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <FaLinkedin />
             </a>
             <a
               href="https://github.com/FeOTech"
               className="text-white/60 hover:text-white transition"
-              target="_blank" rel="noopener noreferrer"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <FaGithub />
             </a>
             <a
-              href="https://twitter.com"
+              href="mailto:feotech.in@gmail.com"
               className="text-white/60 hover:text-white transition"
-              target="_blank" rel="noopener noreferrer"
+              rel="noopener noreferrer"
             >
-              <FaTwitter />
+              <SiGmail />
             </a>
           </div>
         </div>

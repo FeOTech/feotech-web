@@ -22,14 +22,19 @@ const Loader = () => {
   return (
     <div className="fixed inset-0 bg-black flex flex-col items-center justify-center z-[9999] text-white">
       {/* 🔄 Lottie Animation */}
-      <div className="w-48 h-48 mb-4">
-        <Lottie animationData={animationData} loop={true} />
+      <div className="w-48 h-48 -mb-4 overflow-hidden flex items-end justify-center">
+        <Lottie
+          animationData={animationData}
+          loop
+          style={{ width: "100%", height: "100%" }}
+        />
       </div>
-
       {/* 🔰 Logo + Brand Side-by-Side */}
       <div className="flex items-center gap-3 mb-1 scale-110">
-        <Logo width={48} height={48} color="#ffffff" />
-        <span className="text-3xl font-bold tracking-wider uppercase">Feotech</span>
+        <Logo width={38} height={38} color="#ffffff" />
+        <span className="text-3xl font-bold tracking-wider uppercase">
+          Feotech
+        </span>
       </div>
 
       {/* 📊 Bottom Progress Bar */}

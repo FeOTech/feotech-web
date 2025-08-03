@@ -1,5 +1,42 @@
 import React from "react";
 import ChatBotVideo from "../../assets/chatbotdemo.mp4";
+import { FaReact, FaNodeJs, FaDatabase } from "react-icons/fa";
+import { SiTailwindcss, SiOpenai, SiSocketdotio } from "react-icons/si";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+
+const techStack = [
+  {
+    icon: <FaReact className="text-cyan-400 text-4xl" />,
+    title: "ReactJS",
+    desc: "Modern frontend library for building responsive UI components.",
+  },
+  {
+    icon: <FaNodeJs className="text-green-500 text-4xl" />,
+    title: "NodeJS",
+    desc: "JavaScript runtime for building scalable backend APIs.",
+  },
+  {
+    icon: <SiOpenai className="text-purple-400 text-4xl" />,
+    title: "OpenAI GPT",
+    desc: "Powers the conversational intelligence behind the AI chatbot.",
+  },
+  {
+    icon: <FaDatabase className="text-yellow-400 text-4xl" />,
+    title: "MongoDB",
+    desc: "NoSQL database used for efficient data storage and retrieval.",
+  },
+  {
+    icon: <SiTailwindcss className="text-sky-400 text-4xl" />,
+    title: "Tailwind CSS",
+    desc: "Utility-first CSS framework for building modern UIs rapidly.",
+  },
+  {
+    icon: <SiSocketdotio className="text-white text-4xl" />,
+    title: "Socket.IO",
+    desc: "Enables real-time bidirectional communication between client and server.",
+  },
+];
 
 const AIChatbot = () => {
   return (
@@ -122,25 +159,21 @@ const AIChatbot = () => {
       </section>
 
       {/* --- TECH STACK SECTION --- */}
-      <section className="max-w-5xl mx-auto px-4 sm:px-6 py-16 text-center">
-        <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-6">
-          Built With
-        </h3>
-        <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mt-6">
-          {[
-            "React",
-            "Node.js",
-            "OpenAI GPT",
-            "MongoDB",
-            "Tailwind CSS",
-            "Socket.IO",
-          ].map((tech, i) => (
-            <span
-              key={i}
-              className="px-3 py-2 sm:px-4 sm:py-2 rounded-full bg-gray-100 text-sm text-gray-800 border border-gray-300 hover:bg-gray-200 transition"
+      <section className="max-w-6xl mx-auto py-20 px-6">
+        <h2 className="text-3xl font-bold mb-10 text-center">Tech Stack</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          {techStack.map((item, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: index * 0.2 }}
+              className="bg-black text-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1"
             >
-              {tech}
-            </span>
+              <div className="mb-4">{item.icon}</div>
+              <h4 className="font-semibold text-xl mb-2">{item.title}</h4>
+              <p className="text-gray-300 text-sm">{item.desc}</p>
+            </motion.div>
           ))}
         </div>
       </section>
@@ -153,12 +186,12 @@ const AIChatbot = () => {
         <p className="text-base sm:text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
           Let us help you launch in under a week. No heavy setup, just results.
         </p>
-        <a
-          href="#contact"
+        <Link
+          to="/#contact"
           className="inline-block px-6 sm:px-8 py-3 bg-blue-600 text-white font-semibold rounded-full hover:bg-blue-700 transition"
         >
           Contact Us
-        </a>
+        </Link>
       </section>
     </main>
   );
